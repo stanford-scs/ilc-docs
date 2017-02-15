@@ -103,6 +103,12 @@ globally-acceptable consortium in which to concentrate trust.
 
 ## Certificate transparency
 
+Certificate Transparency (CT) is a mechanism, developed by Google and undergoing standardization at the IETF, which brings accountability to certification authorities (CAs) by providing the means to log and audit certificate issuance, and consequently to detect certificate misissuance, certificate leakage, and some other problems related to PKI operations on the public internet.  Issued certificates are logged to public servers, where they are stored in cryptographically signed public logs.  
+
+The CT trust model depends on the integrity of the log.  That is to say, while CT inclusion proofs are used to verify that a given log includes a particular certificate, and that the parties to whom certificates have been issued are authorized to have them, there is nothing inherent to the CT mechanism that can be used to detect a misbehaving log.  One primary class of log misbehavior would be to give different view of the log to different viewers, or what is known as a partitioning attack.
+
+The IETF Public Notary Transparency (trans) working group is responsible for standardizing CT.  They are in the process of specifying three experimental mechanisms for gossiping CT data, with the intent of detecting a non-conforming log, but these have not yet been implemented.
+
 ## End-user identification and key certification
 
 # Protocols
@@ -113,5 +119,3 @@ globally-acceptable consortium in which to concentrate trust.
 
 
 {backmatter}
-
-
